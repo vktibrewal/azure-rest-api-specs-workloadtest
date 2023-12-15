@@ -13345,7 +13345,7 @@
       "x-ms-discriminator-value": "TieringCostRehydrationInfo"
     },
     "TieringCostSavingInfo": {
-      "description": "Response parameters for tiering cost info for savings",
+      "description": "Response parameters for tiering cost info for savings.",
       "required": [
         "objectType",
         "sourceTierSizeReductionInBytes",
