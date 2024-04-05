@@ -6245,7 +6245,7 @@
         }
       ],
       "properties": {
-        "childDBNames": {
+        "childDatabaseNameList": {
           "description": "Name of Child Dbs protected under this parent.",
           "type": "array",
           "items": {
