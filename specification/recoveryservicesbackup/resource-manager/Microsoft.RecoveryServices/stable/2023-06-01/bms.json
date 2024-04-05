@@ -5278,7 +5278,8 @@
             "AzureFileShare",
             "SAPHanaDatabase",
             "SAPAseDatabase",
-            "SAPHanaDBInstance"
+            "SAPHanaDBInstance",
+            "SQLInstance"
           ],
           "type": "string",
           "x-ms-enum": {
@@ -5332,7 +5333,8 @@
             "AzureFileShare",
             "SAPHanaDatabase",
             "SAPAseDatabase",
-            "SAPHanaDBInstance"
+            "SAPHanaDBInstance",
+            "SQLInstance"
           ],
           "type": "string",
           "x-ms-enum": {
