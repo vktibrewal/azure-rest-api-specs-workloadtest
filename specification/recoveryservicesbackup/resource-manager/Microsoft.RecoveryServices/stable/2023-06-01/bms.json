@@ -11840,8 +11840,7 @@
             "SAPHanaDatabase",
             "SAPAseSystem",
             "SAPAseDatabase",
-            "SAPHanaDBInstance",
-            "SQLInstance"
+            "SAPHanaDBInstance"
           ],
           "type": "string",
           "x-ms-enum": {
