@@ -5278,7 +5278,8 @@
             "AzureFileShare",
             "SAPHanaDatabase",
             "SAPAseDatabase",
-            "SAPHanaDBInstance"
+            "SAPHanaDBInstance",
+            "SQLInstance"
           ],
           "type": "string",
           "x-ms-enum": {
@@ -5332,7 +5333,8 @@
             "AzureFileShare",
             "SAPHanaDatabase",
             "SAPAseDatabase",
-            "SAPHanaDBInstance"
+            "SAPHanaDBInstance",
+            "SQLInstance"
           ],
           "type": "string",
           "x-ms-enum": {
@@ -6214,7 +6216,59 @@
           "$ref": "#/definitions/AzureVmWorkloadProtectedItem"
         }
       ],
+      "properties": {
+        "parentProtectedItem": {
+          "description": "Parent Protected item in case protected as part of a parent.",
+          "type": "string"
+        },
+        "protectionLevel": {
+          "description": "Protection type in case protected as part of a parent.",
+          "enum": [
+            "Database",
+            "DatabaseUnderInstance"
+          ],
+          "type": "string",
+          "x-ms-enum": {
+            "name": "ProtectionLevel",
+            "modelAsString": true
+          }
+        }
+      },
       "x-ms-discriminator-value": "AzureVmWorkloadSQLDatabase"
+    }, 
+    "AzureVmWorkloadSQLInstanceProtectedItem": {
+      "description": "Azure VM workload-specific protected item representing SQL Instance.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/AzureVmWorkloadProtectedItem"
+        }
+      ],
+      "properties": {
+        "childDatabaseNameList": {
+          "description": "Name of Child Dbs protected under this parent.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "instanceProtectionReadiness": {
+          "description": "The state of instance protection.",
+          "enum": [
+            "Unknown",
+            "Ready",
+            "ScheduleDisabled",
+            "PartialProtection",
+            "ProtectionError"
+          ],
+          "type": "string",
+          "x-ms-enum": {
+            "name": "InstanceProtectionReadiness",
+            "modelAsString": true
+          }
+        }
+      },
+      "x-ms-discriminator-value": "AzureVmWorkloadSQLInstance"
     },
     "AzureWorkloadErrorInfo": {
       "description": "Azure storage specific error information",
@@ -8239,7 +8293,8 @@
             "AzureFileShare",
             "SAPHanaDatabase",
             "SAPAseDatabase",
-            "SAPHanaDBInstance"
+            "SAPHanaDBInstance",
+            "SQLInstance"
           ],
           "type": "string",
           "x-ms-enum": {
@@ -8722,7 +8777,8 @@
             "AzureFileShare",
             "SAPHanaDatabase",
             "SAPAseDatabase",
-            "SAPHanaDBInstance"
+            "SAPHanaDBInstance",
+            "SQLInstance"
           ],
           "type": "string",
           "x-ms-enum": {
@@ -8869,7 +8925,8 @@
             "AzureFileShare",
             "SAPHanaDatabase",
             "SAPAseDatabase",
-            "SAPHanaDBInstance"
+            "SAPHanaDBInstance",
+            "SQLInstance"
           ],
           "type": "string",
           "x-ms-enum": {
@@ -9006,7 +9063,8 @@
             "AzureFileShare",
             "SAPHanaDatabase",
             "SAPAseDatabase",
-            "SAPHanaDBInstance"
+            "SAPHanaDBInstance",
+            "SQLInstance"
           ],
           "type": "string",
           "x-ms-enum": {
@@ -10841,7 +10899,8 @@
             "AzureFileShare",
             "SAPHanaDatabase",
             "SAPAseDatabase",
-            "SAPHanaDBInstance"
+            "SAPHanaDBInstance",
+            "SQLInstance"
           ],
           "type": "string",
           "x-ms-enum": {
@@ -11006,7 +11065,8 @@
             "AzureFileShare",
             "SAPHanaDatabase",
             "SAPAseDatabase",
-            "SAPHanaDBInstance"
+            "SAPHanaDBInstance",
+            "SQLInstance"
           ],
           "type": "string",
           "x-ms-enum": {
@@ -11257,7 +11317,8 @@
             "AzureFileShare",
             "SAPHanaDatabase",
             "SAPAseDatabase",
-            "SAPHanaDBInstance"
+            "SAPHanaDBInstance",
+            "SQLInstance"
           ],
           "type": "string",
           "x-ms-enum": {
@@ -11648,7 +11709,8 @@
             "AzureFileShare",
             "SAPHanaDatabase",
             "SAPAseDatabase",
-            "SAPHanaDBInstance"
+            "SAPHanaDBInstance",
+            "SQLInstance"
           ],
           "type": "string",
           "x-ms-enum": {
@@ -11699,7 +11761,8 @@
             "AzureFileShare",
             "SAPHanaDatabase",
             "SAPAseDatabase",
-            "SAPHanaDBInstance"
+            "SAPHanaDBInstance",
+            "SQLInstance"
           ],
           "type": "string",
           "x-ms-enum": {
@@ -11805,7 +11868,8 @@
             "AzureFileShare",
             "SAPHanaDatabase",
             "SAPAseDatabase",
-            "SAPHanaDBInstance"
+            "SAPHanaDBInstance",
+            "SQLInstance"
           ],
           "type": "string",
           "x-ms-enum": {
