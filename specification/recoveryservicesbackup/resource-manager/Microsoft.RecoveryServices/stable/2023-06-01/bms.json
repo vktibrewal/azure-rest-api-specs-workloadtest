@@ -5302,6 +5302,20 @@
         "makePolicyConsistent": {
           "description": "Fix the policy inconsistency",
           "type": "boolean"
+        },
+        "vmWorkloadPolicyType":{
+          "description": "Type of policy for the backup management",
+          "enum": [
+            "Invalid",
+            "SnapshotV1",
+            "SnapshotV2",
+            "Streaming"
+          ],
+          "type": "string",
+          "x-ms-enum": {
+            "name": "VMWorkloadPolicyType",
+            "modelAsString": true
+          }
         }
       },
       "x-ms-discriminator-value": "AzureWorkload"
