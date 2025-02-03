@@ -5303,7 +5303,7 @@
           "description": "Fix the policy inconsistency",
           "type": "boolean"
         },
-        "AzureVMWorkloadPolicyType":{
+        "VMWorkloadPolicyType":{
           "description": "Type of policy for the backup management",
           "enum": [
             "Invalid",
@@ -5313,7 +5313,7 @@
           ],
           "type": "string",
           "x-ms-enum": {
-            "name": "VMWorkloadPolicyType",
+            "name": "AzureVMWorkloadPolicyType",
             "modelAsString": true
           }
         }
