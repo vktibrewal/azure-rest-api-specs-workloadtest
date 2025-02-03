@@ -5303,7 +5303,7 @@
           "description": "Fix the policy inconsistency",
           "type": "boolean"
         },
-        "vmWorkloadPolicyType":{
+        "AzureVMWorkloadPolicyType":{
           "description": "Type of policy for the backup management",
           "enum": [
             "Invalid",
